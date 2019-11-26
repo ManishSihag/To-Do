@@ -1,0 +1,12 @@
+{
+   
+    "mongo":{
+         "user": "dbUser1",
+         "password": "dbpassword1",
+        "database": "ToDoApp",
+        "port": 27017,
+        "allowedCORSDomains": [],
+        "connectionString": ""
+    }
+  
+}
