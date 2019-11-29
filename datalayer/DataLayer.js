@@ -4,7 +4,7 @@ class DataLayer{
 
     static initMongoDataLayer() {
         console.log("Connecting to mongo database:", dbConfig.mongo.database)
-        return MongoDataLayer.connect();
+        return MongoDataLayer.connect(dbConfig.mongo);
     }
 
 }

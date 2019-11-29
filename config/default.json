@@ -6,7 +6,9 @@
         "database": "ToDoApp",
         "port": 27017,
         "allowedCORSDomains": [],
-        "connectionString": ""
+         "connectionString": "cluster0-09hto.mongodb.net/test?retryWrites=true&w=majority"
+        
+        
     }
   
 }
