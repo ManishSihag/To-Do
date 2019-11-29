@@ -7,7 +7,7 @@
 ##### Api server can be accessed at http://localhost:3000 
 
 ### Routes
-    1. Create a To-Do task: 
+    1.Create a To-Do task: 
                                POST - http://localhost:3000/tasks
                                     Body - {"taskTitle" : "first", "taskData": "this is first"} //json
 
