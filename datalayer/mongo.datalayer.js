@@ -9,10 +9,15 @@ class MongoDataLayer{
      static connect(dbConfig)
      {
          let connection = `mongodb+srv://${dbConfig.user}:${dbConfig.password}@${dbConfig.connectionString}`
-         return mongoose.connect(connection, { useNewUrlParser: true , useUnifiedTopology: true}).catch((err) => {
-            throw new Error(`Could not connect to MongoDB: ${err.message}`);
-        });
-    }
+       const mongooseConnectionPromise = mongoose.connect(connection, { useNewUrlParser: true , useUnifiedTopology: true});
+         mongoose.connection.on('error', err => {
+             console.error(`MongoDB connection error: ${err}`);
+             //process.exit(-1);
+         });
+
+         return mongooseConnectionPromise;
+        }
+ 
 
      static disconnect(){
         return mongoose.connection.close();
