@@ -1,2 +1,25 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<div>
+<h4><b>Routes</b></h4>
+<b>1.Create a To-Do task: </b><br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; POST - http://localhost:3000/tasks<br>
+   &nbsp;  &nbsp;   &nbsp; &nbsp;  Body - {"taskTitle" : "first", "taskData": "this is first"} //json<br><br>
+
+<b>2.List all To-Do tasks: </b><br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; GET - http://localhost:3000/tasks<br><br>
+                            
+
+<b>3.Get a To-Do task by Id:</b><br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; GET - http://localhost:3000/tasks/:taskid<br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; example - http://localhost:3000/tasks/5de0a431134b2b4224a8ff00<br><br>
+
+<b>4.Update a To-Do task by Id:</b><br>
+  &nbsp;  &nbsp;   &nbsp; &nbsp; PUT - http://localhost:3000/tasks/:taskid<br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; Body - {"taskTitle" : "updatedfirst", "taskData": "this is updatedfirst"}<br><br>
+
+
+<b>5.Delete a To-Do task by Id:</b><br>
+ &nbsp;  &nbsp;   &nbsp; &nbsp; DELETE - http://localhost:3000/tasks/:taskid<br>
+  &nbsp;  &nbsp;   &nbsp; &nbsp;      example - http://localhost:3000/tasks/5de0a431134b2b4224a8ff00<br><br>
+<div>

@@ -10,11 +10,8 @@ router.put('/tasks/:taskid', taskController.updateTaskById);
 router.delete('/tasks/:taskid', taskController.deleteTaskById);
 
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'To-Do API' });
   });
 
-router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
-  });
 
 module.exports = router;
