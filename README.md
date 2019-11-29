@@ -1,4 +1,4 @@
-#To-Do API
+# To-Do API
 
 ### Steps to start the application:
     1. Open terminal in the root directory of the project.
