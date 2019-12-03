@@ -8,8 +8,8 @@ class TaskDatalayer{
         
         const newtask = new taskModel({
             taskTimeStamp: Math.floor(today/1000),
-            taskTitle : task.taskTitle,
-            taskData : task.taskData});
+            title : task.title,
+            data : task.data});
 
         return newtask.save().catch((err)=>{
             throw new Error(`Could not create a Task ${err.message}`);
@@ -35,8 +35,8 @@ class TaskDatalayer{
         var today = new Date();
         let updatedTask = {
           taskTimeStamp : Math.floor(today/1000),
-          taskTitle : task.taskTitle,
-          taskData : task.taskData
+          title : task.title,
+          data : task.data
         };
         return taskModel
         .findByIdAndUpdate(taskid, updatedTask , {new : true, useFindAndModify: false}).exec()

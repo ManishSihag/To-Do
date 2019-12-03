@@ -12,12 +12,12 @@ const taskSchema = new mongoose.Schema({
         required : true
     },
 
-    taskTitle:{
+    title:{
         type : String,
         required: true
     },
 
-    taskData: {
+    data: {
         type:String,
         required: true
     }

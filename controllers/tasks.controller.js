@@ -3,11 +3,11 @@ const taskDatalayer = require('../datalayer/task.datalayer')
 class taskController{
    //Create a new ToDo Task
     static async createTask(req,res){
-        let {taskTitle, taskData} = req.body
-        if(!taskTitle || !taskData){
+        let {title, data} = req.body
+        if(!title || !data){
             return res.status(400).send('Bad Request');
         }
-        let task = {taskData,taskTitle};
+        let task = {data,title};
         try {
             task = await taskDatalayer.createTask(task);
         } catch (error) {
@@ -46,10 +46,10 @@ class taskController{
     static async updateTaskById(req, res){
         let taskid = req.params.taskid
         const updateTask = {
-                 taskTitle : req.body.taskTitle,
-                 taskData : req.body.taskData
+                 title : req.body.title,
+                 data : req.body.data
            }
-           if(!updateTask.taskTitle || !updateTask.taskData){
+           if(!updateTask.title || !updateTask.data){
                return res.status(400).send('Bad Request');
            }
            try {

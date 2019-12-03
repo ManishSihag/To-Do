@@ -9,7 +9,7 @@
 ### Routes
     1.Create a To-Do task: 
                                POST - http://localhost:3000/tasks
-                                    Body - {"taskTitle" : "first", "taskData": "this is first"} //json
+                                    Body - {"title" : "first", "data": "this is first"} //json
 
     2.List all To-Do tasks: 
                                GET - http://localhost:3000/tasks
@@ -21,7 +21,7 @@
 
     4.Update a To-Do task by Id:
                                PUT - http://localhost:3000/tasks/:taskid
-                                   Body - {"taskTitle" : "updatedfirst", "taskData": "this is updatedfirst"}
+                                   Body - {"title" : "updatedfirst", "data": "this is updatedfirst"}
 
     
     5.Delete a To-Do task by Id:
